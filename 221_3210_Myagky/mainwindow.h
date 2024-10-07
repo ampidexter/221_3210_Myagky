@@ -15,9 +15,12 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_addTransaction_clicked();
+    void onTransactionAdded(const QString& amount, const QString& wallet, const QString& date, const QString& hash); // новый слот для обработки добавления транзакции
+
 private:
     Ui::MainWindow *ui;
-
 
     void loadTransactions(const QString& fileName);
 };
