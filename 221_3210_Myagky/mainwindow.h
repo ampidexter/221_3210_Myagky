@@ -17,5 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+
+    void loadTransactions(const QString& fileName);
 };
+
 #endif // MAINWINDOW_H
